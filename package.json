@@ -1,0 +1,16 @@
+{
+  "name": "easylog",
+  "version": "0.1.0",
+  "description": "javascript log",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "logger",
+    "javascript"
+  ],
+  "author": "Germancito",
+  "license": "ISC"
+}
