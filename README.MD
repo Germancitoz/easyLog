@@ -1,4 +1,4 @@
-# [easylog]()
+# [easylogger]()
 
 # Information
 
@@ -28,7 +28,7 @@ These instructions will get you a copy of the project up and running on your loc
 Start with downloading the npm package
 
 ```sh
-$ npm i easylog
+$ npm i easylogger
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ $ npm i easylog
 - Then you can import it
 
 ```js
-import logger from "easylog";
+import logger from "easylogger";
 ```
 
 ## Config
@@ -56,7 +56,7 @@ Easy log has a basic configuration to be more customizable for the user
 For example you want to change the path where the logs save so you only have to type this
 
 ```js
-  import logger from "easylog";
+  import logger from "easylogger";
 
   logger.options.path: "./mycustom";
 ```
@@ -78,4 +78,4 @@ Is necessary to use this [PREFIXES](https://gist.github.com/joshbuchea/6f47e86d2
 
 - **German Fernandez** - _Initial work_ - [Germancitoz](https://github.com/Germancitoz)
 
-See also the list of [contributors](https://github.com/Germancitoz/easylog/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/Germancitoz/easylogger/contributors) who participated in this project.
