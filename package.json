@@ -12,5 +12,9 @@
     "javascript"
   ],
   "author": "Germancito",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Germancitoz/easylog"
+  },
   "license": "ISC"
 }
