@@ -1,4 +1,4 @@
-# [easylogger]()
+# [easylogger](https://www.npmjs.com/package/easylogger.js)
 
 # Information
 
