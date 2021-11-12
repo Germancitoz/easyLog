@@ -49,6 +49,7 @@ Easy log has a basic configuration to be more customizable for the user
   options: {
     showInConsole: true,
     path: "./logs",
+    useDate: true,
   },
 };
 ```
