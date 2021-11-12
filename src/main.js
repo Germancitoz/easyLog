@@ -4,6 +4,7 @@ const logger = {
   options: {
     showInConsole: true,
     path: "./logs",
+    useDate: true,
   },
 };
 
