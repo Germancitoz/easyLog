@@ -1,22 +1,23 @@
 import { saveFile } from "./file.js";
 
-import COLORS from "../config/colors.js";
+import STYLE from "../config/style.js";
 
 export const sendLog = (type, message, options) => {
   const { path, showInConsole, useDate } = options;
 
+  let date = "";
   let template = `[${type}] - ${message}`;
 
   if (useDate) {
-    const date = new Date();
-    template = `${date.toLocaleDateString()} | ${template}`;
+    date = new Date().toLocaleDateString();
+    template = `${date} | ${template}`;
   }
 
   saveFile(path, type, template);
 
   if (showInConsole) {
-    const color = COLORS[type];
-    template = `${color}${date} | [${type}]${COLORS.RESET} - ${message}`;
+    const color = STYLE[type];
+    template = `${color}${date} | [${type}]${STYLE.RESET} - ${message}`;
     console.log(template);
   }
 };
