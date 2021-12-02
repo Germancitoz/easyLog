@@ -8,11 +8,20 @@ const logger = {
   },
 };
 
-logger.done = (message) => sendLog("DONE", message, logger.options);
-logger.error = (message) => sendLog("ERROR", message, logger.options);
-logger.warn = (message) => sendLog("WARN", message, logger.options);
-logger.debug = (message) => sendLog("DEBUG", message, logger.options);
+logger.done = ({ message }) => sendLog("DONE", "DONE", message, logger.options);
 
-logger.color = (color, message) => sendLog(color, message, logger.options);
+logger.error = ({ message }) =>
+  sendLog("ERROR", "ERROR", message, logger.options);
+
+logger.warn = ({ message }) => sendLog("WARN", "WARN", message, logger.options);
+
+logger.debug = ({ message }) =>
+  sendLog("DEBUG", "DEBUG", message, logger.options);
+
+logger.color = ({ color, message }) =>
+  sendLog(color, color, message, logger.options);
+
+logger.custom = ({ type, color, message }) =>
+  sendLog(type, color, message, logger.options);
 
 export default logger;
