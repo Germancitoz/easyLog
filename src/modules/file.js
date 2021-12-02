@@ -1,8 +1,8 @@
 import fs from "node:fs";
 
 export const saveFile = (path, type, data) => {
-  const date = new Date();
-  path = `${path}/${date.getDay()}-${date.getMonth()}`;
+  const date = new Date().toLocaleDateString("en-ZA");
+  path = `${path}/${date}`;
 
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path, {
