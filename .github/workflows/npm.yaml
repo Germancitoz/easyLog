@@ -1,0 +1,29 @@
+name: 'Publish npm package'
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  cancel_previous_workflow:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: 'Cancel previous workflow'
+        uses: styfle/cancel-workflow-action@0.9.1
+        with:
+          access_token: ${{ github.token }}
+
+  publish_npm:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+
+      - name: 'Setup Nodejs'
+        uses: actions/setup-node@v1
+
+      - name: 'Publish package on NPM'
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
